@@ -1,6 +1,9 @@
 let userScore = document.querySelector("#user-score");
 let compScore = document.querySelector("#comp-score");
 const ROCK_DIV = document.querySelector("#rock");
+const ROCK_IMG = document.querySelector("#rock > img");
+const PAPER_IMG = document.querySelector("#paper > img");
+const SCISSORS_IMG = document.querySelector("#scissors > img");
 const PAPER_DIV = document.querySelector("#paper");
 const SCISSORS_DIV = document.querySelector("#scissors");
 const MESSAGE_DIV = document.querySelector("#message");
@@ -55,13 +58,42 @@ function main() {
        game("rock");
     });
 
+    ROCK_DIV.addEventListener("mousedown", function () {
+       ROCK_IMG.classList.add("grow");
+    });
+
+    ROCK_DIV.addEventListener("mouseup",function () {
+        ROCK_IMG.classList.remove("grow");
+    });
+
     PAPER_DIV.addEventListener("click", function () {
        game("paper");
     });
 
+    PAPER_DIV.addEventListener("mousedown", function () {
+        PAPER_IMG.classList.add("grow");
+    });
+
+    PAPER_DIV.addEventListener("mouseup",function () {
+        PAPER_IMG.classList.remove("grow");
+    });
+
     SCISSORS_DIV.addEventListener("click", function () {
         game("scissors");
-    })
+    });
+
+    SCISSORS_DIV.addEventListener("mousedown", function () {
+        SCISSORS_IMG.classList.add("grow");
+    });
+
+    SCISSORS_DIV.addEventListener("mouseup",function () {
+        SCISSORS_IMG.classList.remove("grow");
+    });
+}
+
+function reset() {
+    userScore.innerHTML = 0;
+    compScore.innerHTML = 0;
 }
 
 main();

@@ -3,19 +3,24 @@
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    background: #1E373C;
 }
 
 header {
     width: 100%;
     text-align: center;
-    background: cyan;
+    background: #fff;
+    color: #000;
     padding: 20px 30px;
     font-weight: bold;
     font-size: 24px;
 }
 
 .container {
-    border: 1px dashed red;
     width: 600px;
     height: 600px;
     margin: auto;
@@ -30,7 +35,7 @@ header {
     font-size: 24px;
     font-weight: bold;
     position: relative;
-    border: 2px solid black;
+    border: 2px solid #fff;
     border-radius: 5px;
 }
 
@@ -45,25 +50,25 @@ header {
 }
 
 #user-label {
-    position: absolute;
-    font-size: 11px;
-    background: orange;
     top: 35%;
     left: -12%;
-    padding: 2px;
 }
 
 #comp-label {
-    position: absolute;
-    padding: 2px;
-    font-size: 11px;
-    background: orange;
     top: 35%;
     right: -23%;
 }
 
+.label {
+    position: absolute;
+    padding: 2px;
+    font-size: 11px;
+    background: #E35555;
+}
+
 #message {
-    background: red;
+    background: none;
+    font-weight: bold;
     text-align: center;
     padding: 5px 10px;
     width: 95%;
@@ -72,7 +77,6 @@ header {
 
 .play-buttons {
     display: flex;
-    border: 1px dashed red;
     width: 80%;
     margin: 20px auto;
 }
@@ -87,4 +91,21 @@ img {
 #rock, #paper, #scissors {
     flex: 1;
     cursor: pointer;
+}
+
+#reset {
+    display: block;
+    margin: 50px auto;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background: none;
+    outline: none;
+}
+
+.grow {
+    width: 105px;
+    height: 105px;
 }
