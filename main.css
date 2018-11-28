@@ -93,7 +93,7 @@ img {
     cursor: pointer;
 }
 
-#reset {
+.btn {
     display: block;
     margin: 50px auto;
     padding: 5px 10px;
@@ -103,6 +103,18 @@ img {
     font-weight: bold;
     background: none;
     outline: none;
+}
+
+#getChoice {
+}
+
+.show {
+    margin: 0 auto;
+    visibility: visible;
+}
+
+.hide {
+    visibility: hidden;
 }
 
 .grow {
